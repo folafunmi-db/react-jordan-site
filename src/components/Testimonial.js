@@ -31,7 +31,7 @@ const Testimonial = () => {
 	useEffect(() => {
 		gsap.from([tHead, tBody, tDir], 0.6, {
 			y: -40,
-			delay: 1.2,
+			delay: 1.8,
 			ease: "power3.easeInOut",
 			opacity: 0,
 			stagger: 0.3,

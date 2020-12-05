@@ -9,7 +9,7 @@ const Pic = () => {
 	useEffect(() => {
 		gsap.from(pic.current, 0.6, {
 			x: -20,
-			delay: 1.7,
+			delay: 2.3,
 			ease: "powr3.easeInOut",
 			opacity: 0,
 		});

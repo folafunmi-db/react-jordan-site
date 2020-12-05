@@ -9,7 +9,7 @@ const Heading = () => {
 	useEffect(() => {
 		gsap.from([top.current, mid.current, bottom.current], 0.6, {
 			x: -40,
-			delay: 0,
+			delay: 0.6,
 			ease: "power3.easeInOut",
 			opacity: 0,
 			stagger: 0.3,

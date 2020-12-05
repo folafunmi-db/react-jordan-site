@@ -23,7 +23,7 @@ const Sneakers = () => {
 	useEffect(() => {
 		gsap.from([shoe], 0.6, {
 			x: -40,
-			delay: 0.5,
+			delay: 1.1,
 			ease: "power3.easeInOut",
 			opacity: 0,
 		});
@@ -32,7 +32,7 @@ const Sneakers = () => {
 	useEffect(() => {
 		gsap.from([arrB], 0.6, {
 			x: -40,
-			delay: 0.6,
+			delay: 1.2,
 			ease: "power3.easeInOut",
 			opacity: 0,
 		});

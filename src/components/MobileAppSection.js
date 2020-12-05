@@ -9,7 +9,7 @@ const MobileAppSection = () => {
 	useEffect(() => {
 		gsap.from([mHead.current, mBody.current], 0.6, {
 			y: -40,
-			delay: 1.2,
+			delay: 1.8,
 			ease: "power3.easeInOut",
 			opacity: 0,
 			stagger: 0.3,

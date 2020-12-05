@@ -169,6 +169,7 @@ $white: #dfd9d9;
 		display: flex;
 		justify-content: space-around;
 		width: 10rem;
+
 		.nav {
 			color: $white;
 			text-decoration: none;
@@ -282,6 +283,8 @@ $white: #dfd9d9;
 		width: 27rem;
 		transform: rotate(-30deg);
 		margin-left: -5rem;
+		margin-bottom: 1rem;
+		height: 13rem;
 		z-index: 5;
 		// position: absolute;
 		// left: -5rem;
@@ -364,18 +367,23 @@ $white: #dfd9d9;
 		height: fit-content;
 		display: flex;
 		gap: 0.5rem;
+		margin-bottom: 1rem;
 
 		.dot {
 			background-color: $white;
 			width: 0.5rem;
 			height: 0.5rem;
 			border-radius: 50%;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $yellow;
+			}
 		}
 
 		.current {
 			// border: 2px solid rgba(251, 223, 0, 0.5);
 			background-color: $yellow;
-			margin-bottom: 1rem;
 		}
 	}
 }

@@ -12,16 +12,14 @@ const ShopContent = () => {
 			src: Sneaker1,
 			title: "Runner Kotare",
 			subTitle: "Black",
-			text:
-				"Consectetur amet nulla anim cillum officia qui dolor qui voluptate exercitation velit.",
+			text: "Consectetur amet nulla anim cillum officia.",
 			amount: "NGN 17,000",
 		},
 		{
 			src: Sneaker2,
 			title: "Nike Air-Max 270",
 			subTitle: "Black",
-			text:
-				"Consectetur amet nulla anim cillum officia qui dolor qui voluptate exercitation velit.",
+			text: "Consectetur amet nulla anim cillum officia.",
 			amount: "NGN 47,000",
 		},
 	];
@@ -40,7 +38,7 @@ const ShopContent = () => {
 							amount={item.amount}
 							key={idx}
 						/>
-          ))}
+					))}
 				</div>
 			</div>
 			<div className="shop-right">

@@ -61,6 +61,7 @@ $white: #dfd9d9;
 .route {
 	width: 70vw;
 	max-width: 950px;
+	// min-width: 920px;
 
 	height: 80vh;
 	border-radius: 15px;
@@ -464,10 +465,10 @@ $white: #dfd9d9;
 	.shop-back {
 		width: 0;
 		height: 0;
-		border-top: 47rem solid $yellow;
-		border-right: 77rem solid transparent;
+		border-top: 65rem solid $yellow;
+		border-right: 100rem solid transparent;
 		pointer-events: none;
-		margin-top: -63rem;
+		margin-top: -54rem;
 		z-index: -1;
 	}
 }
@@ -488,7 +489,7 @@ $white: #dfd9d9;
 			color: $black;
 			text-decoration: none;
 			position: relative;
-			padding: .2rem;
+			padding: 0.2rem;
 
 			&:before {
 				content: "";
@@ -536,10 +537,14 @@ $white: #dfd9d9;
 
 	.shop-left {
 		display: grid;
-		grid-template-rows: 7fr 1fr;
+		grid-template-rows: 2fr 1fr;
 		height: min-content;
 		max-height: inherit;
+
 		.lite {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+			height: fit-content;
 		}
 	}
 	.shop-right {
@@ -630,7 +635,8 @@ $white: #dfd9d9;
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
-			gap: .5rem;
+			gap: 0.5rem;
+
 			.dot {
 				background-color: $white;
 				width: 0.5rem;
@@ -647,19 +653,40 @@ $white: #dfd9d9;
 }
 
 .shop-lite {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	gap: 0.5rem;
+	height: fit-content;
+
 	img {
-		width: 7rem;
+		width: 6rem;
 		transform: rotate(-30deg);
 	}
+
 	.rest {
-		h2 {
-			color: $white;
-		}
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		text-align: left;
+
+		h2,
 		h3 {
-			color: $white;
+			font-size: 0.8rem;
+			color: $black;
+			margin: 0;
+			width: fit-content;
+			display: inline;
+		}
+		h4 {
+			font-size: 0.6rem;
+			color: $black;
+			margin: 0;
 		}
 		p {
-			color: $white;
+			text-align: left;
+			font-size: 0.5rem;
+			color: $black;
+			margin: 0;
 		}
 	}
 }

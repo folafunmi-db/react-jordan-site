@@ -17,7 +17,7 @@ const Heading = () => {
 	}, []);
 
 	return (
-		<heading className="heading">
+		<header className="heading">
 			<div className="heading-top" ref={top}>
 				BASKETBALL SHOE
 			</div>
@@ -29,7 +29,7 @@ const Heading = () => {
 				dolore. Reprehenderit deserunt laborum voluptate ea officia
 				excepteur ullamco irure proident cupidatat in.
 			</div>
-		</heading>
+		</header>
 	);
 };
 

@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import Nike from "../assets/nike-png_4341181.png";
 import { GoSearch } from "react-icons/go";
 
-const Menubar = () => {
+const Menubar = ({pg}) => {
 	let refLink1 = useRef(null);
 	let refLink2 = useRef(null);
 
@@ -24,13 +24,13 @@ const Menubar = () => {
 	useEffect(() => {}, []);
 
 	return (
-		<div className="menu-bar">
-			<div className="menu-left" ref={(el) => (refLink1 = el)}>
+		<div className={`${pg}-bar`}>
+			<div className={`${pg}-left`} ref={(el) => (refLink1 = el)}>
 				<img src={Nike} alt="Nike Logo" />
 				<GoSearch className="search" />
 			</div>
 
-			<div className="menu-right" ref={(el) => (refLink2 = el)}>
+			<div className={`${pg}-right`} ref={(el) => (refLink2 = el)}>
 				{menu.map((item, idx) => (
 					<NavLink
 						key={idx}

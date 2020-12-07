@@ -74,6 +74,11 @@ $white: #dfd9d9;
 	grid-template-columns: 1fr 15fr;
 }
 
+.shop {
+	display: grid;
+	grid-template-columns: 1fr 15fr;
+}
+
 .side-bar {
 	background-color: $black;
 	border-radius: 15px 0px 0px 15px;
@@ -133,8 +138,6 @@ $white: #dfd9d9;
 	scrollbar-width: none;
 	max-width: 950px;
 
-	// height: inherit;
-
 	&::-webkit-scrollbar {
 		display: none;
 	}
@@ -144,7 +147,6 @@ $white: #dfd9d9;
 		position: absolute;
 		bottom: 20%;
 		left: 7%;
-		// left: auto;
 		z-index: 1;
 		font-size: 18rem;
 		height: fit-content;
@@ -164,6 +166,7 @@ $white: #dfd9d9;
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem;
+	z-index: 5;
 
 	.menu-right {
 		display: flex;
@@ -444,21 +447,219 @@ $white: #dfd9d9;
 	}
 }
 
-.page-enter {
-	opacity: 0;
+.main2 {
+	background-color: $black;
+	border-radius: 0px 15px 15px 0px;
+	position: relative;
+	overflow: hidden;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	max-width: 950px;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.shop-back {
+		width: 0;
+		height: 0;
+		border-top: 47rem solid $yellow;
+		border-right: 77rem solid transparent;
+		pointer-events: none;
+		margin-top: -63rem;
+		z-index: -1;
+	}
 }
 
-.page-enter-active {
-	opacity: 1;
-	transition: opacity 400ms;
-	transition-delay: 600ms;
+.shop-bar {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: $yellow;
+	z-index: 5;
+
+	.shop-right {
+		display: flex;
+		justify-content: space-around;
+		width: 10rem;
+
+		.nav {
+			color: $black;
+			text-decoration: none;
+			position: relative;
+			padding: .2rem;
+
+			&:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 0%;
+				background-color: $black;
+				opacity: 0.3;
+				bottom: 0px;
+				left: 0;
+				transition: all ease-in-out 0.2s;
+			}
+
+			&:hover {
+				&:before {
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	.shop-left {
+		img {
+			width: 50px;
+			height: 20px;
+			margin: 0 1rem;
+		}
+
+		.search {
+			color: $black;
+			cursor: pointer;
+			margin: 0 0.5rem;
+		}
+	}
 }
 
-.page-exit {
-	opacity: 1;
+.shop-contents {
+	z-index: 5;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	width: 90%;
+	max-width: 870px;
+	margin: 0 auto;
+	max-height: 800px;
+
+	.shop-left {
+		display: grid;
+		grid-template-rows: 7fr 1fr;
+		height: min-content;
+		max-height: inherit;
+		.lite {
+		}
+	}
+	.shop-right {
+	}
 }
 
-.page-exit-active {
-	opacity: 0;
-	transition: opacity 400ms;
+.heading2 {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	height: min-content;
+	margin: 5rem 0;
+	line-height: 3.7rem;
+
+	.first {
+		font-size: 2rem;
+		font-weight: 500;
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			height: 3px;
+			width: 55%;
+			background-color: $black;
+			bottom: 1.1rem;
+			left: 7rem;
+		}
+	}
+	.second {
+		font-size: 7rem;
+		font-weight: 700;
+	}
+	.third {
+		font-size: 2rem;
+		font-weight: 700;
+	}
+	button {
+		font-family: inherit;
+		font-size: 1.5rem;
+		font-weight: 700;
+		background-color: none;
+		background: none;
+		outline: 0;
+		border: 3px solid $black;
+		width: fit-content;
+		height: fit-content;
+		padding: 0.4rem 1rem;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $black;
+			color: $yellow;
+			transition: all ease-in 0.1s;
+		}
+	}
+}
+
+.shop-sneakers {
+	gap: 3rem;
+	margin: 3rem 0;
+
+	img {
+		width: 25rem;
+	}
+
+	.dir {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		height: fit-content;
+		margin: 1.5rem 0;
+
+		.arr {
+			color: $yellow;
+			padding: 0.3rem;
+			width: 2rem;
+			height: 2rem;
+			text-align: center;
+			cursor: pointer;
+
+			&:hover {
+				color: $white;
+			}
+		}
+		.dots {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: .5rem;
+			.dot {
+				background-color: $white;
+				width: 0.5rem;
+				height: 0.5rem;
+				border-radius: 50%;
+				cursor: pointer;
+
+				&:hover {
+					background-color: $yellow;
+				}
+			}
+		}
+	}
+}
+
+.shop-lite {
+	img {
+		width: 7rem;
+		transform: rotate(-30deg);
+	}
+	.rest {
+		h2 {
+			color: $white;
+		}
+		h3 {
+			color: $white;
+		}
+		p {
+			color: $white;
+		}
+	}
 }

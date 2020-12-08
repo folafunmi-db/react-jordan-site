@@ -23,12 +23,12 @@ function App() {
 			))}
 			<div className="copyright">
 				Made with 💛 by{" "}
-				<Link
-					to="https://github.com/folafunmi-db"
+				<a
+					href="https://github.com/folafunmi-db"
 					className="copy-link"
 				>
 					Folafunmi
-				</Link>{" "}
+				</a>{" "}
 				| Based on a design by Godson C. JNR.
 			</div>
 		</div>

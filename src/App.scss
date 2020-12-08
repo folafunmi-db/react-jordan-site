@@ -58,8 +58,14 @@ $white: #dfd9d9;
 	}
 }
 
+.pl {
+	color: $white;
+	margin: 1.5rem auto;
+	font-weight: bold;
+}
+
 .route {
-	width: 70vw;
+	width: 95vw;
 	max-width: 950px;
 	// min-width: 920px;
 
@@ -198,6 +204,8 @@ $white: #dfd9d9;
 	}
 
 	.menu-left {
+		display: flex;
+		justify-content: center;
 		img {
 			width: 50px;
 			height: 20px;
@@ -227,11 +235,12 @@ $white: #dfd9d9;
 	width: inherit;
 	height: inherit;
 	max-width: 870px;
+	gap: 2rem;
 
 	.content {
 		width: 90%;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 		padding-top: 5rem;
 	}
 	.top {
@@ -266,12 +275,14 @@ $white: #dfd9d9;
 		color: $white;
 		margin-bottom: 0.6rem;
 		width: max-content;
+		max-width: 340px;
 	}
 
 	.heading-bottom {
 		color: $white;
 		font-size: 0.8rem;
 		line-height: 1.2rem;
+		width: 85%;
 	}
 }
 
@@ -465,8 +476,8 @@ $white: #dfd9d9;
 	.shop-back {
 		width: 0;
 		height: 0;
-		border-top: 65rem solid $yellow;
-		border-right: 100rem solid transparent;
+		border-top: 63rem solid $yellow;
+		border-right: 98rem solid transparent;
 		pointer-events: none;
 		margin-top: -54rem;
 		z-index: -1;
@@ -545,6 +556,7 @@ $white: #dfd9d9;
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 			height: fit-content;
+			margin-left: -1.5rem;
 		}
 	}
 	.shop-right {
@@ -557,7 +569,7 @@ $white: #dfd9d9;
 	text-align: left;
 	height: min-content;
 	margin: 5rem 0;
-	line-height: 3.7rem;
+	line-height: 3.9rem;
 
 	.first {
 		font-size: 2rem;
@@ -569,6 +581,7 @@ $white: #dfd9d9;
 			position: absolute;
 			height: 3px;
 			width: 55%;
+			max-width: 200px;
 			background-color: $black;
 			bottom: 1.1rem;
 			left: 7rem;
@@ -687,6 +700,37 @@ $white: #dfd9d9;
 			font-size: 0.5rem;
 			color: $black;
 			margin: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 960px) {
+	.contents {
+		gap: 10rem;
+
+		.top {
+			gap: 5rem;
+
+			.heading {
+				.heading-mid {
+					width: 90%;
+				}
+
+				.heading-bottom {
+					width: 85%;
+				}
+			}
+
+			.sneaker {
+				img {
+					width: 20rem;
+					height: 10rem;
+					margin-left: -1rem;
+				}
+			}
 		}
 	}
 }

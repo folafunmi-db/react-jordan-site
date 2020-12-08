@@ -13,12 +13,20 @@ const ShopSneakers = () => {
 	let dirs = useRef(null);
 
 	useEffect(() => {
-		gsap.from([imgd.current, dirs.current], 0.6, {
+		gsap.from(imgd.current, 0.6, {
 			x: -30,
 			delay: 0.1,
 			ease: "power3.easeInOut",
 			opacity: 0,
-			stagger: 0.3,
+		});
+	}, [shopShoe]);
+
+	useEffect(() => {
+		gsap.from(dirs.current, 0.6, {
+			x: -30,
+			delay: 0.3,
+			ease: "power3.easeInOut",
+			opacity: 0,
 		});
 	}, []);
 

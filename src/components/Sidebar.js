@@ -1,5 +1,3 @@
-import { gsap } from "gsap";
-
 import { FaTwitter } from "react-icons/fa";
 import { FaGithubAlt } from "react-icons/fa";
 import { CgMenuGridO } from "react-icons/cg";

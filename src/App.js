@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 
 import { Route } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const routes = [
 	{ path: "/", name: "Home", Component: Home },

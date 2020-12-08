@@ -1,15 +1,9 @@
-import { useEffect, useRef } from "react";
-
-import { gsap } from "gsap";
 import { NavLink } from "react-router-dom";
 
 import Nike from "../assets/nike-png_4341181.png";
 import { GoSearch } from "react-icons/go";
 
 const Menubar = ({pg}) => {
-	let refLink1 = useRef(null);
-	let refLink2 = useRef(null);
-
 	const menu = [
 		{
 			title: `HOME`,
@@ -21,16 +15,15 @@ const Menubar = ({pg}) => {
 		},
 	];
 
-	useEffect(() => {}, []);
 
 	return (
 		<div className={`${pg}-bar`}>
-			<div className={`${pg}-left`} ref={(el) => (refLink1 = el)}>
+			<div className={`${pg}-left`}>
 				<img src={Nike} alt="Nike Logo" />
 				<GoSearch className="search" />
 			</div>
 
-			<div className={`${pg}-right`} ref={(el) => (refLink2 = el)}>
+			<div className={`${pg}-right`}>
 				{menu.map((item, idx) => (
 					<NavLink
 						key={idx}

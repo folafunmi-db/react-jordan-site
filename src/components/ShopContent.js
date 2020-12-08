@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from "react";
 
 import Sneaker1 from "../assets/air-max-270-total-orange-best-nike-shoes.png";
 import Sneaker2 from "../assets/nike-basketball-logo-png_7699741.png";

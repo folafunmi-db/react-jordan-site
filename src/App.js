@@ -12,7 +12,7 @@ const routes = [
 function App() {
 	return (
 		<div className="App">
-			<div className="pl">Please 🥺🙏🏾 view on a large screen</div>
+			<div className="pl">Not suitable for mobile. Please 🥺🙏🏾 view on a large screen</div>
 			{routes.map(({ path, Component, name }) => (
 				<Route key={name} path={path} exact>
 					<div className="page">
